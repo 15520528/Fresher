@@ -5,6 +5,7 @@
 * 2.  lấy input từ user
     * 1. nếu user nhập 'd' thì sử dụng lênh rm xóa file lưu trong biến $arr , và ghi danh sách files đã xóa vào logfile
     * 2. nếu user nhập 'c' thì dung lệnh tar để nén file 
+
 ```c
 #!/bin/sh
 cd /    // di chuyển về root
@@ -24,6 +25,4 @@ else
 	echo "compressed files"
 	tar -czvf a.tar.gz $arr 
 fi
-
-
 ```

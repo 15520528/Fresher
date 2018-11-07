@@ -1,5 +1,5 @@
 # Liệt kê các ports đang mở
-sudo netstat -lptu
+> sudo netstat -lptu
 
 ### Giải thích
 * netstat là lệnh hiển thị các thông tin về mạng của hệ thống
