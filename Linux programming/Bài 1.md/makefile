@@ -1,7 +1,7 @@
 all: server1.exe client1.exe
 
 server1.exe: server1.o
-	 gcc -o server1.exe server1.o
+	 gcc -pthread -o server1.exe server1.o
 
 client1.exe: client1.o
 	gcc -o client1.exe client1.o

@@ -8,12 +8,11 @@ file killprocess.sh
 
 ``` shell
 #!/bin/sh
-ps aux|awk -v A="$1" '$11~A {print $2}'| xargs kill 
+ps aux|awk -v A="$1" '$11~A {print $2}'| xargs kill -9
 ```
 Các chạy : Trên terminal ghõ ./killprocess.sh "tên process muốn terminate"
 
 Ví dụ: ta nếu muốn terminate các process có tên là xlogo
 
-![terminal1]
-(./images/process.png)
+![GitHub Logo](../images/process.png)
 
