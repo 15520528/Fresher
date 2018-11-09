@@ -69,3 +69,8 @@
     ```
     git mv File.txt file.txt
     ```
+- Trong một số trường hợp nếu bạn lỡ ghõ sai message mà bạn commit lần cuối thì git cung cấp `git commit --amend -m <new message>` để sửa lại
+   ```
+    git commit --ammend -m "Hello world"
+    ```
+    <i>Thậm chí nếu bạn thay đổi một số file mà quên chưa thêm nó vào lần commit cuối thì sử dụng `git  commit --amend  --no-edit`</i>
