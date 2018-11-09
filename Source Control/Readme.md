@@ -62,3 +62,10 @@
     ```
     git stash clear
     ```
+#### 1.5 làm việc với branch
+
+#### 1.6 các lệnh hữu ích
+- Trong trường hợp nếu lỡ tay add 1 file để commit, và bạn nhận ra tên file mình commit bị sai. Git cung cấp lệnh `git mv <tên file cũ> <tên file mới>` để đổi lại tên file đã bị nhập sai. 
+    ```
+    git mv File.txt file.txt
+    ```
