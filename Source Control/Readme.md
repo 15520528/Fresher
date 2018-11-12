@@ -74,6 +74,7 @@
     git commit --ammend -m "Hello world"
     ```
     <i>Thậm chí nếu bạn thay đổi một số file mà quên chưa thêm nó vào lần commit cuối thì sử dụng `git  commit --amend  --no-edit`</i>
-## Thực hành
+
+## 2 Thực hành
 email tham gia làm bài tập: namvh10997@gmail.com
 ![image](./images/results.png)
