@@ -27,7 +27,7 @@ int main()
 
     server_sockfd = socket(AF_INET, SOCK_STREAM, 0);
     server_address.sin_family = AF_INET;                //kiểu domain cho socket server
-    server_address.sin_addr.s_addr = htonl(INADDR_ANY); //địa chỉ Id ? cái này để làm gì?
+    server_address.sin_addr.s_addr = htonl(INADDR_ANY); //chấp nhận kết nối từ tất cả địa chị client
     server_address.sin_port = htons(9734);              // port mà socket server sẽ kết nối
     server_len = sizeof(server_address);
     bind(server_sockfd, (struct sockaddr *)&server_address, server_len); //bind server socket với địa chỉ server

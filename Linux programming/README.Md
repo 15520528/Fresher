@@ -19,6 +19,19 @@
 * socket blocking là hiện tượng xảy ra khi một socket đang thực hiện một lời gọi I/O cho một client. Các connections từ các client khác sẽ phải chờ cho tới khi socket đó thực thiện xong lời gọi I/O cho client đang giao tiếp với nó.
 
 * Socket nonblocking thì một socket sẽ không chờ cho tới khi lời gọi I/O cho một client được hoàn thành. thay vào đó nó sẽ thự hiện lời gọi I/O từ nhiều client khác.
+
+5. Network byte order
+- Không phải tất cả các máy tính đều lưu trữ các bytes theo một thứ tự giống nhau. Khi giá trị một số cần nhiều hơn 1 bytes để lưu trữ, thì có 2 cách thông dụng để lưu trữ giá trị
+    * big-endian: Các bit có trọng số nhỏ nhất (LSB) luôn được lưu ở ô nhớ có địa chỉ lớn nhất còn bit có trọng số lớn nhất được lưu ở ô nhớ có địa chỉ nhỏ nhất trong vùng lưu trữ của biến. Trong đó các bit LSB sẽ nằm ngoài cùng bên phải , còn các bit MSB sẽ nằm ngoài bên trái
+
+        Ví dụ việc lưu trữ một biến 7411
+        ![GitHub Logo](./images/big.png)
+
+    * littile-endian: Ngược lại với các nền tảng sử dụng big-endian, LSB luôn được lưu ở ô nhớ có địa chỉ nhỏ nhất, còn MSB luôn được lưu ở ô nhớ có địa chỉ lớn nhất
+
+        Ví dụ việc lưu trữ một biến 7411
+        ![GitHub Logo](./images/little.png)
+- Để cho phép các máy tính khác nhau về byte order giao tiếp với nhau, internet protocol  đưa ra một chuẩn byte order cho việc truyền dữ liệu. Khi thiết lập kết nối socket, phải đảm bảo rằng dữ liệu trên sin_port và sin_adds trong cấu trúc sockadrr phải biểu diễn theo byte order của network
 ## II. TCP/UDP
 1. ĐỊnh nghĩa
 
