@@ -62,22 +62,6 @@ int main()
                 perror("could not create thread");
                 return 1;
             }
-
-            /*
-            strcpy(filepath, "/home/lap10547/Documents/");
-            strcat(filepath, buffer);
-            printf("filepath received from client: %s\n", filepath);
-            fp = fopen(filepath, "rb");
-
-            if (fp != NULL)
-            {
-                while ((b = fread(sendbuffer, 1, sizeof(sendbuffer), fp)) > 0)
-                {
-                    send(client_sockfd, sendbuffer, b, 0);
-                }
-            }
-            
-            close(client_sockfd);*/
             memset(&buffer, 0, sizeof(buffer));
         }
     }
@@ -97,10 +81,9 @@ void *sendFile(void *client_sockfd)
     {
         send(thread_agr.sock, sendbuffer, b, 0);
     }
-    /*
+   
     fclose(fp);
     free(client_sockfd);
-    */
     close(thread_agr.sock);
     pthread_exit(NULL);
 }
