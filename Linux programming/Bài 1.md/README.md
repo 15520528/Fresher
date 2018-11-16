@@ -3,7 +3,9 @@
 -  [x] Xử lý được multiclients dựa vào thread
 
 Xử lý tại client
-```#include <sys/types.h>
+
+```
+#include <sys/types.h>
 #include <sys/socket.h>
 #include <stdio.h>
 #include <netinet/in.h>
@@ -56,11 +58,11 @@ int main(int argc, char *argv[])
     close(sockfd); //đóng kết nối socket
     exit(0);
 }
-
 ```
 Xử lý tại server
 
-```#include <sys/types.h>
+```
+#include <sys/types.h>
 #include <sys/socket.h>
 #include <stdio.h>
 #include <netinet/in.h>
